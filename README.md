@@ -101,12 +101,59 @@ npm run build
 
 医療教育・研究目的での利用を想定しています。商用利用については別途ご相談ください。
 
+## 新規合併症フローチャートの追加方法
+
+新しい合併症フローチャートを追加する際は、以下のドキュメントを参照してください：
+
+- **[DEVELOPMENT_GUIDE.md](./DEVELOPMENT_GUIDE.md)**: 詳細な開発手順とベストプラクティス
+- **[TEMPLATE_NEW_APP.md](./TEMPLATE_NEW_APP.md)**: 新規アプリ作成テンプレート
+- **[create-new-app.ps1](./create-new-app.ps1)**: 自動化スクリプト（PowerShell）
+
+### クイックスタート
+
+```powershell
+# 自動化スクリプトを使用した新規アプリ作成
+.\create-new-app.ps1 -AppName "perforation" -DisplayName "冠動脈穿孔" -Description "冠動脈穿孔時の対応フロー"
+
+# 手動での作成手順
+cd [new-app-name]-flowchart
+npm install
+# constants/flowchartData.ts を編集
+# public/images/ に参考画像を配置
+npm run dev  # テスト
+npm run build  # ビルド
+```
+
+### 重要な注意事項
+
+1. **画像パス**: 必ず相対パス（`./images/`）を使用
+2. **Vite設定**: `base` パスをアプリ名に合わせて設定
+3. **原本準拠**: 医療フローチャートの忠実な再現を最優先
+4. **色分け**: GREEN（推奨）、ORANGE（注意）、RED（危険）
+
+## トラブルシューティング
+
+### よくある問題
+
+- **画像が表示されない**: 絶対パス（`/images/`）を相対パス（`./images/`）に変更
+- **Netlifyで404エラー**: `netlify.toml` の `publish = "static-build"` 設定を確認
+- **JavaScriptが読み込まれない**: `vite.config.ts` の `base` パス設定を確認
+
+詳細は [DEVELOPMENT_GUIDE.md](./DEVELOPMENT_GUIDE.md) を参照してください。
+
 ## 開発者
 
 - 原本フローチャート: 医療専門機関提供
 - アプリケーション開発: Windsurf AI Assistant
+- 開発ドキュメント整備: 2025年7月
 
 ## 更新履歴
+
+- **v1.1.0**: 開発ドキュメント整備
+  - 包括的な開発ガイドの追加
+  - 新規アプリ作成テンプレートの提供
+  - 自動化スクリプトの実装
+  - トラブルシューティングガイドの充実
 
 - **v1.0.0**: 初回リリース
   - IVUS-Bailout Flowchartの実装
