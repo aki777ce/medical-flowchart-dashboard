@@ -2,16 +2,16 @@ import { FlowchartNode, NodeType, BulletColor, ChoiceStyle } from '../types';
 
 // The browser environment doesn't support importing images directly as modules.
 // Instead, we define the paths as simple strings. The web server will serve
-// these images from the root directory.
-const imageCoreGWExchange = '/images/image-core-gw-exchange.png';
-const imageBalloonDilatationDoubleGc = '/images/balloon_dilatation_double_gc.png';
-const imageCatheterAndStentDetails = '/images/catheter_and_stent_details.png';
-const imageLoop = '/images/loop.png';
-const imageCompleteStuck = '/images/complete stuck.png';
-const image6FGc = '/images/6F GC.png';
-const imageKnuckle = '/images/knuckle.png';
-const imageRotation = '/images/rotation.png';
-const imageGec = '/images/gec.png';
+// these images from the current directory.
+const imageCoreGWExchange = './images/image-core-gw-exchange.png';
+const imageBalloonDilatationDoubleGc = './images/balloon_dilatation_double_gc.png';
+const imageCatheterAndStentDetails = './images/catheter_and_stent_details.png';
+const imageLoop = './images/loop.png';
+const imageCompleteStuck = './images/complete stuck.png';
+const image6FGc = './images/6F GC.png';
+const imageKnuckle = './images/knuckle.png';
+const imageRotation = './images/rotation.png';
+const imageGec = './images/gec.png';
 
 export const flowchartData: Record<string, FlowchartNode> = {
   START: {
