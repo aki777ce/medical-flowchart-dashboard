@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合併症対応フローチャート ダッシュボード</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dashboard-container {
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .app-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .app-card.disabled {
+            background: linear-gradient(135deg, #ccc 0%, #999 100%);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .app-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+        .app-card p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+        .status-info {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid #28a745;
+        }
+        .status-info h4 {
+            margin: 0 0 10px 0;
+            color: #28a745;
+        }
+        .status-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .deployment-info {
+            background-color: #e3f2fd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid #2196f3;
+        }
+        .deployment-info h4 {
+            margin: 0 0 10px 0;
+            color: #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>PCI Complication<br>対応フローチャート</h1>
+        
+        <div class="app-grid">
+            <a href="./ivus-bailout/index.html" class="app-card">
+                <h3>IVUS-Bailout Flowchart</h3>
+                <p>イメージングカテーテルスタック時の対応フロー</p>
+            </a>
+            <a href="./coronary-dissection/index.html" class="app-card">
+                <h3>Coronary Dissection Flowchart</h3>
+                <p>カテーテルによる冠動脈解離発生時の対応フロー</p>
+            </a>
+        </div>
+
+
+    </div>
+</body>
+</html>

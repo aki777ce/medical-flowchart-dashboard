@@ -1,0 +1,6 @@
+{
+  "name": "Cardiovascular Procedure Flowchart",
+  "description": "An interactive decision-making guide for handling complications during cardiovascular procedures, based on a provided medical flowchart. This application helps medical professionals navigate complex scenarios step-by-step.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
