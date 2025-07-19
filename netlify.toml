@@ -1,0 +1,16 @@
+[build]
+  # 公開ディレクトリをstatic-buildに設定
+  publish = "static-build"
+  
+  # ビルドコマンドは不要（静的ファイルのみ）
+  command = ""
+
+[build.environment]
+  # Node.jsバージョン指定（必要に応じて）
+  NODE_VERSION = "18"
+
+# SPAのルーティング対応（必要に応じて）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
