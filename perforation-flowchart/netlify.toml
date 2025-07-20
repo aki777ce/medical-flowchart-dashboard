@@ -1,0 +1,8 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/perforation/*"
+  to = "/perforation/index.html"
+  status = 200

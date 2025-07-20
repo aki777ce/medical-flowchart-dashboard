@@ -51,6 +51,17 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4 font-sans">
         <header className="w-full max-w-2xl mx-auto text-center mb-6">
+            <div className="flex items-center justify-between mb-4">
+                <button 
+                    onClick={() => window.location.href = '../index.html'}
+                    className="flex items-center px-3 py-2 text-slate-600 hover:text-slate-800 transition-colors duration-200"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    ダッシュボードに戻る
+                </button>
+            </div>
             <h1 className="text-2xl md:text-3xl font-bold text-slate-800">IVUSカテーテルスタック</h1>
             <p className="text-slate-600 mt-1">ベイルアウト・フローアプリケーション</p>
         </header>

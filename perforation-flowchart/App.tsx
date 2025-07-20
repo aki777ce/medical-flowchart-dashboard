@@ -37,7 +37,7 @@ const App: React.FC = () => {
       case NodeType.DECISION:
         return <DecisionNode node={currentNode} onChoice={handleChoice} />;
       case NodeType.OUTCOME:
-        return <ResultNode node={currentNode} onRestart={handleRestart} />;
+        return <ResultNode node={currentNode} onRestart={handleRestart} onNext={handleChoice} />;
       default:
          return (
             <div className="text-center text-red-500">
@@ -62,7 +62,7 @@ const App: React.FC = () => {
                     ダッシュボードに戻る
                 </button>
             </div>
-            <h1 className="text-2xl md:text-3xl font-bold text-slate-800">カテーテルによる重症冠動脈解離</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-slate-800 mb-1">冠動脈穿孔対応フロー</h1>
             <p className="text-slate-600 mt-1">ベイルアウト・フローアプリケーション</p>
         </header>
         <main className="w-full max-w-2xl mx-auto">

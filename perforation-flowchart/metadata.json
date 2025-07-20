@@ -1,0 +1,7 @@
+{
+  "name": "perforation-flowchart",
+  "displayName": "冠動脈穿孔対応フロー",
+  "description": "冠動脈穿孔時の対応フローチャート",
+  "version": "1.0.0",
+  "basePath": "/perforation/"
+}
